@@ -1,11 +1,11 @@
 # Site settings
 author: Carden Z
-title: 
+title: X
 header-img: img/home-bg.png
 email: ephemere@protonmail.com
 copyright_name: Carden Z
 description: > # this means to ignore newlines until "baseurl:"
-  
+  Misadventures in Coding
 baseurl: "" # the subpath of your site, e.g. /blog
 twitter_username: 
 github_username:  capricious-slingshot
