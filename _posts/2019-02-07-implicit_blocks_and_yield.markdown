@@ -17,9 +17,9 @@ blocks have a built in predicate method: `block_given?`. Like all predicate meth
 
 Implicit blocks belong to the Proc class, but are generally preferred to their parent counterpart Procs (one of the other closure types), for performance reasons. as instantiating a new Proc object object incurs a surprisingly heavy performance penalty.
 
-The value of the last line handled by the Implicit block will be returned to the method from which it was called on, at the same line of execution as `yield`. This result can be stored  in a mathod variable to be used elsewhere within the calling method, or simply ignored if something like `puts` is being used to print (`puts` should be used with caution, however, as it will always retrun `nil`). 
+The value of the last line handled by the Implicit block will be returned to the method from which it was called, on whatever line `yield` appears. This result can be stored in a method variable to be used elsewhere within the method, or simply ignored if something like `puts` is being used to print (`puts` should be used with caution, however, as it will always retrun `nil`).  This assignment can occur simultaneously with the call to the Implicit block for simplicitly.
 
 References:
 https://reactive.io/tips/2008/12/21/understanding-ruby-blocks-procs-and-lambdas
 https://mudge.name/2011/01/26/passing-blocks-in-ruby-without-block.html
-https://blog.appsignal.com/2018/09/04/ruby-magic-closures-in-ruby-blocks-procs-and-lambdas.htmlre.
+https://blog.appsignal.com/2018/09/04/ruby-magic-closures-in-ruby-blocks-procs-and-lambdas.html.
