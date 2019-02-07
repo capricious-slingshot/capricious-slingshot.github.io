@@ -21,5 +21,7 @@ The value of the last line handled by the Implicit block will be returned to the
 
 References:
 https://reactive.io/tips/2008/12/21/understanding-ruby-blocks-procs-and-lambdas
+
 https://mudge.name/2011/01/26/passing-blocks-in-ruby-without-block.html
+
 https://blog.appsignal.com/2018/09/04/ruby-magic-closures-in-ruby-blocks-procs-and-lambdas.html.
