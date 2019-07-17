@@ -26,27 +26,43 @@ The gem version, much like Ruby’s own version, follows [semantic versioning](h
 
 There are two ways to install a gem on your computer.
 
+1.   Locally from the Command Line
+
+A program called bundler will fetch the latest gem version for your platform from Rubygems.org, or in the case of individual gems, from the specified ``:path``.
+
       ``bundle install gem_name``
 			
-A program called bundler will fetch the latest gem version for your platform from the source set at the top of your gemfile, or in the case of individual gems, from the specified :path.
 
-``gem 'extracted_library', '~> 1.2', :path => './vendor/extracted_library'``
+      ``gem 'extracted_library', '~> 1.2', :path => './vendor/extracted_library'``
 
-These gems are installed generally around the user root of your computer, depending on your OS and ruby version. This location works for either installation method, and can be accessed using:
+These gems are installed generally around the user root of your computer, depending on your OS and Ruby Version. This location can be viewed using:
 
 ``gem list                              (all local gems)``
 
-``gem list sinatra -d                   (author/details of specific gem)``
+Bundler will not only install the gem that you requested, but it will also install any dependencies needed for it to run. This dependency list is packaged within each gem itself and is automagically handled for you by bundler. 
 
-Bundler will not only install the gem that you requested, but it will also install any dependencies needed for it to run. This dependency list is packaged within each gem itself and is automagically handled for you by bundler. To quote [bundler.io](http://https://bundler.io):
+2. At the Application Level via Gemfile
 
-*“Bundler is an exit from dependency hell”*
+Bundler will fetch the latest gem version for your platform from the source set at the top of your gemfile, or in the case of individual gems, from the specified ``:path``.
+			 
+			 This location can be viewed using:
+			 
+			 ``gem list sinatra -d                   (author/details of specific gem)``
+			 
+More on the specifics of creating a gemfile below.
+
+
+To quote [bundler.io](http://https://bundler.io):
+
+### *“Bundler is an exit from dependency hell”*
 
 For the purposes of this post, just know that there is way more going on with bundler than can be seen by the naked eye. It makes developer life easy by ensuring that the gems you need are present and compatible at varying levels of development, testing, and deployment.
 
 When writing programs and developing applications, the preferred method of installing gems on your machine is to use a Gemfile. Running ``bundle install`` from the root of your program will install all required gems. ``require 'gem_name' `` at the top of your file will then make it accessible to Ruby, by putting it on the load path. This is a cleaner way of keeping track of what gems are running in each individual program, prevents buggy behavior by forcing your program to use a specific gem version, and most importantly allows anyone pulling down your code to get up and running with the correct gem set quickly.
+			 
 
-### Creating a Gemfile
+			 
+#### Gemfiles
 
 A Gemfile is simply a plain text file that holds all of the gem dependencies needed for your application to run Ruby. Gemfiles require at least one gem source, in the form of the URL for a Rubygems server. Upon creation of your project, running
 
