@@ -30,26 +30,26 @@ There are two ways to install a gem on your computer.
 
 A program called bundler will fetch the latest gem version for your platform from Rubygems.org, or in the case of individual gems, from the specified ``:path``.
 
-      ``bundle install gem_name``
+      bundle install gem_name
 			
 
-      ``gem 'extracted_library', '~> 1.2', :path => './vendor/extracted_library'``
+      gem 'extracted_library', '~> 1.2', :path => './vendor/extracted_library'
 
 These gems are installed generally around the user root of your computer, depending on your OS and Ruby Version. This location can be viewed using:
 
-``gem list                              (all local gems)``
+      gem list                              (all local gems)
 
 Bundler will not only install the gem that you requested, but it will also install any dependencies needed for it to run. This dependency list is packaged within each gem itself and is automagically handled for you by bundler. 
 
-2. At the Application Level via Gemfile
+2.   At the Application Level via Gemfile
 
 Bundler will fetch the latest gem version for your platform from the source set at the top of your gemfile, or in the case of individual gems, from the specified ``:path``.
 			 
-			 This location can be viewed using:
+This location can be viewed using:
 			 
-			 ``gem list sinatra -d                   (author/details of specific gem)``
+			 gem list sinatra -d                   (author/details of specific gem)
 			 
-More on the specifics of creating a gemfile below.
+More on the specifics of gemfiles below.
 
 
 To quote [bundler.io](http://https://bundler.io):
@@ -66,7 +66,7 @@ When writing programs and developing applications, the preferred method of insta
 
 A Gemfile is simply a plain text file that holds all of the gem dependencies needed for your application to run Ruby. Gemfiles require at least one gem source, in the form of the URL for a Rubygems server. Upon creation of your project, running
 
-``bundle init``
+      bundle init
 
 will generate a new Gemfile at the root of your project directory and add the default ‘https’ protocol source for [rubygems.org](http://rubygems.org) automatically. This verifies your connection to the rubygems.org server will be verified with SSL. You can then add/remove gems from this file over time as needed.
 
@@ -74,9 +74,9 @@ All gems should be declared, including version numbers. Without going into too m
 
 RubyGems provides a ‘happy medium’ shortcut for version constraint called the [twiddle-wakka](https://thoughtbot.com/blog/rubys-pessimistic-operator). This convention ignores the **PATCH** level part of the version number (allowing it to increase), and will allow any **MINOR** changes (standards dictate that these must be backwards compatible) up to but not including the next **MAJOR** release.
 
-``gem 'library', '~> 2.2'``
+      gem 'library', '~> 2.2'
 
-``gem 'extracted_library', '~> 1.2', :path => './vendor/extracted_library'``
+      gem 'extracted_library', '~> 1.2', :path => './vendor/extracted_library'
 
 Take away: guard yourself from potential bugs/failures/sleeploss by using the twiddle-wakka shortcut instead of not declaring a version at all. For Alfred 2 powerpack users using rubygems as your source, I highly recommend [this extension](http://https://github.com/BlueVajra/ruby_gem_workflow) for ease of daily life (only alfred 2).
 
@@ -84,30 +84,30 @@ Take away: guard yourself from potential bugs/failures/sleeploss by using the tw
 
 For programs or applications that require a large Gemfile (such as Sinatra or Rails) your gem declarations can be further organized into groups to limit what gets loaded in particular environments. The most commonly used groups are: development, testing, staging, and production. They can be declared one of two ways:
 
-A `` do   end ``block for multiple gems within a group:
+A `` do   end `` block for multiple gems within a group:
 
-``group :test do
-      gem 'rspec', '~> 3.0.0'
-      gem 'capybara', '~> 2.4.1'
-end``
+      group :test do
+           gem 'rspec', '~> 3.0.0'
+           gem 'capybara', '~> 2.4.1'
+      end
 
 or in the same line as your declaration for smaller subsets or standalone gems:
 
-``gem 'rspec', '~> 3.0.0', :group => :test``
+      gem 'rspec', '~> 3.0.0', :group => :test
 
-``gem 'cucumber', '~> 1.3.15', :group => [:cucumber, :test]``
+      gem 'cucumber', '~> 1.3.15', :group => [:cucumber, :test]
 
 Any gems that are not included inside groups are considered default, and will be automatically loaded everywhere. Grouping allows you to pass flags when running ``bundle install`` to omit unnecessary gems (see: databases) from being loaded onto your computer:
 
-``bundle install --without staging production``
+      bundle install --without staging production
 
 Additionally, many frameworks (e.g. Rails) will require a specific group all at once by default:
 
-``Bundler.require(:development)``
+      Bundler.require(:development)
 
 ### Gemfile.lock
 
-The file that is automagically generated when you run bundle install. This file is only read by the computer (ie: don’t touch). It looks virtually identical to your Gemfile, but is actually a resolved set of dependencies, and it doesn’t change over time. Think of this file as a working ‘snapshot’ of the Gemfile.
+This is the mysterious file that is automagically generated when you run bundle install at the application level. This file is only read by the computer (ie: don’t touch). It looks virtually identical to your Gemfile, but is actually a resolved set of dependencies, and it doesn’t change over time. Think of this file as a working ‘snapshot’ of the Gemfile.
 
 Bundler loads the gem declarations, their dependencies, and identifies any constraints between gems. It then selects the best available gem version that satisfies all constraints within a gemfile and locks it down. The `` .lock `` will always be used unless explicitly updated, even if a bigger/better/faster version is released that satisfies these constraints. ``Gemfile.lock``  can also be a safety precaution when updating gems, but that is another topic entirely that I will save for another day.
 
