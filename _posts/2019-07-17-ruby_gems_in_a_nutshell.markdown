@@ -24,9 +24,9 @@ The gem version, much like Ruby’s own version, follows [semantic versioning](h
 
 ### Installing a gem
 
-There are two ways to install a gem on your computer.
+There are two ways to install a Ruby Gem:
 
-1.   Locally from the Command Line
+ - *Locally from the Command Line* - 
 
 A program called bundler will fetch the latest gem version for your platform from Rubygems.org, or in the case of vendor specific gems, from the specified ``:path``.
 
@@ -41,13 +41,13 @@ These gems are installed generally around the user root of your computer, depend
 
 Bundler will not only install the gem that you requested, but it will also install any dependencies needed for it to run. This dependency list is packaged within each gem itself and is automagically handled for you by bundler. 
 
-2.   At the Application Level via Gemfile
+ - *At the Application Level via Gemfile* -
 
 Bundler will fetch the latest gem version for your platform from the source set at the top of your gemfile, or in the case of vendor specific gems, from the specified ``:path``.
 			 
 This location can be viewed using:
 			 
-			gem list sinatra -d                   (author/details of specific gem)
+		gem list sinatra -d                   (author/details of specific gem)
 			 
 More on the specifics of gemfiles below.
 
