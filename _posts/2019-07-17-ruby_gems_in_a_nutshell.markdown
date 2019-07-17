@@ -26,7 +26,7 @@ The gem version, much like Ruby’s own version, follows [semantic versioning](h
 
 There are two ways to install a Ruby Gem:
 
- - *Locally from the Command Line* - 
+ - *Locally from the Command Line*
 
 A program called bundler will fetch the latest gem version for your platform from Rubygems.org, or in the case of vendor specific gems, from the specified ``:path``.
 
@@ -41,7 +41,7 @@ These gems are installed generally around the user root of your computer, depend
 
 Bundler will not only install the gem that you requested, but it will also install any dependencies needed for it to run. This dependency list is packaged within each gem itself and is automagically handled for you by bundler. 
 
- - *At the Application Level via Gemfile* -
+ - *At the Application Level via Gemfile*
 
 Bundler will fetch the latest gem version for your platform from the source set at the top of your gemfile, or in the case of vendor specific gems, from the specified ``:path``.
 			 
@@ -62,7 +62,7 @@ When writing programs and developing applications, the preferred method of insta
 			 
 
 			 
-#### Gemfiles
+### Gemfiles
 
 A Gemfile is simply a plain text file that holds all of the gem dependencies needed for your application to run Ruby. Gemfiles require at least one gem source, in the form of the URL for a Rubygems server. Upon creation of your project, running
 
