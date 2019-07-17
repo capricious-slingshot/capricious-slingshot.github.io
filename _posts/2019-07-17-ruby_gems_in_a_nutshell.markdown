@@ -28,7 +28,7 @@ There are two ways to install a gem on your computer.
 
 1.   Locally from the Command Line
 
-A program called bundler will fetch the latest gem version for your platform from Rubygems.org, or in the case of individual gems, from the specified ``:path``.
+A program called bundler will fetch the latest gem version for your platform from Rubygems.org, or in the case of vendor specific gems, from the specified ``:path``.
 
       bundle install gem_name
 			
@@ -43,11 +43,11 @@ Bundler will not only install the gem that you requested, but it will also insta
 
 2.   At the Application Level via Gemfile
 
-Bundler will fetch the latest gem version for your platform from the source set at the top of your gemfile, or in the case of individual gems, from the specified ``:path``.
+Bundler will fetch the latest gem version for your platform from the source set at the top of your gemfile, or in the case of vendor specific gems, from the specified ``:path``.
 			 
 This location can be viewed using:
 			 
-			 gem list sinatra -d                   (author/details of specific gem)
+			gem list sinatra -d                   (author/details of specific gem)
 			 
 More on the specifics of gemfiles below.
 
