@@ -12,7 +12,7 @@ Each gem has 3 key parts: **name**, **version**, and **platform**.
 
 The **gem name** is completely arbitrary, but generally has some correlation to the problem it is trying to solve. Every published public gem *must* have a unique name. Private or Local gems must also have a unique name within their namespace, but require an additional ``:path`` option to avoid a Bundler mishap with any public gems.
 
-The gem version, much like Ruby’s own version, follows [semantic versioning] (https://semver.org). This consists of 3 numbers, separated by periods, reading left to right in order of importance. Version numbers are similar to a car milage counter; when a number on the left changes, everything to the left is zeroed out and the count begins again. A **pre-release** is any version beginning with zero, and is a way of signaling to users ‘this is under rapid development, use with caution’.
+The gem version, much like Ruby’s own version, follows [semantic versioning](https://semver.org). This consists of 3 numbers, separated by periods, reading left to right in order of importance. Version numbers are similar to a car milage counter; when a number on the left changes, everything to the left is zeroed out and the count begins again. A **pre-release** is any version beginning with zero, and is a way of signaling to users ‘this is under rapid development, use with caution’.
 
 ***MAJOR** – Leftmost position. Increments only when backwards incompatible API changes occur. Updating after such a change will most likely break your codebase and should be fully tested before deployment.
 
