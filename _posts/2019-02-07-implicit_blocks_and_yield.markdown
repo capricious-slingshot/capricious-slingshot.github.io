@@ -19,9 +19,9 @@ Implicit blocks belong to the Proc class, but are generally preferred to their p
 
 The value of the last line handled by the Implicit block will be returned to the method from which it was called, on whatever line `yield` appears. This result can be stored in a method variable to be used elsewhere within the method, or simply ignored if something like `puts` is being used to print (`puts` should be used with caution, however, as it will always return `nil`).  This varriable assignment can occur simultaneously with the call to the Implicit block for simplicity.
 
-#####References:
-#####[understanding-ruby-blocks-procs-and-lambdas](https://reactive.io/tips/2008/12/21/understanding-ruby-blocks-procs-and-lambdas)
+##### References:
+##### [understanding-ruby-blocks-procs-and-lambdas](https://reactive.io/tips/2008/12/21/understanding-ruby-blocks-procs-and-lambdas)
 
-#####[passing-blocks-in-ruby-without-block](https://mudge.name/2011/01/26/passing-blocks-in-ruby-without-block.html)
+##### [passing-blocks-in-ruby-without-block](https://mudge.name/2011/01/26/passing-blocks-in-ruby-without-block.html)
 
-#####[ruby-magic-closures-in-ruby](https://blog.appsignal.com/2018/09/04/ruby-magic-closures-in-ruby-blocks-procs-and-lambdas.html)
+##### [ruby-magic-closures-in-ruby](https://blog.appsignal.com/2018/09/04/ruby-magic-closures-in-ruby-blocks-procs-and-lambdas.html)
