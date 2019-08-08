@@ -1,16 +1,16 @@
 ---
 layout: post
 title:      "HyperText Transfer Protocol"
-date:       2019-08-08 19:09:30 +0000
+date:       2019-08-08 15:09:31 -0400
 permalink:  hypertext_transfer_protocol
 ---
 
 
 HTTP is a simple, yet powerful network protocol that is the backbone of communication between clients and servers on the internet. Knowing HTTP enables you to interact with Web servers, pass queries, resources (ie: images), as well as files. It is language independent, however for the purposes of this blog post I’ll be talking about HTTP as it applies to Sinatra and Ruby. Simply stated, HTTP is the rules for asking and sending other computers information.
 
-	•	HyperText – HMTL/XML (Markup) 
-	•	Transfer – exchange of information from computer to web server 
-	•	Protocol – formatting rules for this information 
+	•	HyperText – HMTL/XML (Markup)&#x2028;
+	•	Transfer – exchange of information from computer to web server&#x2028;
+	•	Protocol – formatting rules for this information&#x2028;
 	
 This protocol is composed of messages that are sent from client to server and back in a cyclical process known as the **Request Response Loop**. Although this cycle can be quite complex as a message finds it’s was from the client to the server and back, we will only be looking at the origin and end result; the *Request* and the *Response*. 
 
@@ -125,6 +125,8 @@ Similar in behavior, but not to be confused with the  *PATCH* (update) methods, 
 
 User                 Browser                  App                      View                  Data
 
+![post](https://photos.google.com/photo/AF1QipMpTuU5gGr8UmH7K23ia7405xbOjIbr2NX6MUYl)
+
 ￼
 Last but not least, lets have a look at the **PUT** and **PATCH** HTTP requests. Sandwiched in between two get responses, these request result in an updated or entirely new resource at the specified path:
 
@@ -139,7 +141,7 @@ Last but not least, lets have a look at the **PUT** and **PATCH** HTTP requests.
 These two are so similar in nature that the difference in what is actually being done on the server is negligible. The difference in the verbs is more for developer understanding:
 
 User                 Browser                  App                      View                  Data
-￼
+￼![put/[patch](https://photos.google.com/photo/AF1QipM05yqzp6pso9yk5o4mAYuMWlGCj4vbXSngONIe)
 
  
 There is, of corse, more to HTTP than just the basics I’ve run through here. These are the the most common interactions that you will have with HTTP when building for Sinatra and this brief foundation will get you a long way. For further information or to just satisfy your general curiosity feel free to explore the links below.
