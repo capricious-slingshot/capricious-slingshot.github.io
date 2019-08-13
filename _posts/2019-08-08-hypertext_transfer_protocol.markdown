@@ -131,7 +131,7 @@ Building on top of that, let’s look at the **DELETE** method:
 This builds upon the *GET* request, as specified in version 1.1 of the HTTP specification. The connection remains open until the entire request has finished, in this case it’s a delete request stacked on top of redirect that then fetches the HTML for a default page:
 
 User                 Browser                  App                      View                  Data
-￼![delete request](https://photos.google.com/photo/AF1QipNWCWUUpnuqgb3eSXdrW-vV3RhfX278AHbtU1Lj)
+￼![delete request](https://postimg.cc/FYT2c9ZB)
 
 ---
 
@@ -149,7 +149,7 @@ User                 Browser                  App                      View     
 
 ￼---
 
-Last but not least, lets have a look at the **PUT** and/or **PATCH** HTTP requests. Sandwiched in between two get responses, these request result in an updated or entirely new resource at the specified path:
+Last but not least, lets have a look at the **PUT** and/or **PATCH** HTTP requests. Sandwiched in between two get responses, these requests result in an updated or entirely new resource at the specified path:
 
 ```
 		PUT  '/:path' do
