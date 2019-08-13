@@ -163,7 +163,7 @@ Last but not least, lets have a look at the **PUT** and/or **PATCH** HTTP reques
 
 These two are so similar in nature that the difference in what is actually being done on the server is negligible. The difference in the verbs is more for developer understanding:
 
-User                :   |   Browser             :   |  App                                 :   |  View                       :   | Data :   |
+User:              | Browser:       | App:                |  View:                |             Data : |
 ￼![put/patch](https://i.postimg.cc/ZR7SvLs5/PUT-PATCH.png)
 
 ---
