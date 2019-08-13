@@ -69,7 +69,7 @@ Before we get into examining how Sinatra handles HTTP requests, we need to take 
 
 There are about 50 different possible HTTP Status codes but these are some of the most frequently seen:
 
-Code  | Reason Phrase | Description
+Code  |  Reason   |  Description
 --- | --- | ---
 **200** | *OK* | Everything worked out. Server finds the page and returns it to your computer along with this status
 **301** | *Moved Permanently* | Returned by the server when the requested page has moved somewhere else
@@ -147,7 +147,7 @@ User                 Browser                  App                      View     
 
 <img src="https://i.postimg.cc/3RJhwqBq/POST.png" alt="post_request">
 
-￼---
+---
 
 Last but not least, lets have a look at the **PUT** and/or **PATCH** HTTP requests. Sandwiched in between two get responses, these requests result in an updated or entirely new resource at the specified path:
 
@@ -163,7 +163,7 @@ Last but not least, lets have a look at the **PUT** and/or **PATCH** HTTP reques
 
 These two are so similar in nature that the difference in what is actually being done on the server is negligible. The difference in the verbs is more for developer understanding:
 
-User                 Browser                  App                      View                  Data
+User                : |   Browser               : |  App                    : |  View                  :|  Data
 
 ￼![put/patch](https://i.postimg.cc/ZR7SvLs5/PUT-PATCH.png)
 
