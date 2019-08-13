@@ -168,6 +168,7 @@ There is, of corse, more to HTTP than just the basics I’ve run through here. T
 ---
 
 **Resources**
+
 *http://www.jmarshall.com/easy/http/#whatis*
 
 *http://en.wikipedia.org/wiki/List_of_HTTP_status_codes*
