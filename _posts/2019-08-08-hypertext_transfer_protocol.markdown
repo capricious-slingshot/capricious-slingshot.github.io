@@ -18,6 +18,8 @@ Protocol – formatting rules for this information
 	
 This protocol is composed of messages that are sent from client to server and back in a cyclical process known as the **Request Response Loop**. Although this cycle can be quite complex as a message finds it’s was from the client to the server and back, we will only be looking at the origin and end result; the *Request* and the *Response*. 
 
+---
+
 **REQUEST:**
 
 HTTP client opens a connection and sends a request message composed of the following parts to an HTTP server:
@@ -28,6 +30,8 @@ HTTP client opens a connection and sends a request message composed of the follo
 
 *	**Request Body:** (optional)
 	
+
+---
 
 **RESPONSE:**
 
