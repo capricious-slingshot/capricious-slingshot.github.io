@@ -8,37 +8,42 @@ permalink:  hypertext_transfer_protocol
 
 HTTP is a simple, yet powerful network protocol that is the backbone of communication between clients and servers on the internet. Knowing HTTP enables you to interact with Web servers, pass queries, resources (ie: images), as well as files. It is language independent, however for the purposes of this blog post I’ll be talking about HTTP as it applies to Sinatra and Ruby. Simply stated, HTTP is the rules for asking and sending other computers information.
 
-	•	HyperText – HMTL/XML (Markup)&#x2028;
-	•	Transfer – exchange of information from computer to web server&#x2028;
-	•	Protocol – formatting rules for this information&#x2028;
+
+HyperText – HMTL/XML (Markup)
+
+Transfer – exchange of information from computer to web server
+
+Protocol – formatting rules for this information
+
 	
 This protocol is composed of messages that are sent from client to server and back in a cyclical process known as the **Request Response Loop**. Although this cycle can be quite complex as a message finds it’s was from the client to the server and back, we will only be looking at the origin and end result; the *Request* and the *Response*. 
 
-**Request:**
+**REQUEST**
 HTTP client opens a connection and sends a request message composed of the following parts to an HTTP server:
 
-	*	Request-Line: Request-Method*, Request-URI*, Protocol Version*
+*	**Request-Line:** Request-Method*, Request-URI*, Protocol Version*
 	
-	*	Request Header: request modifiers that allow the client to pass additional information such as host, encoding, cookies etc.
+*	**Request Header:** request modifiers that allow the client to pass additional information such as host, encoding, cookies etc.
 
-	*	Request Body: (optional)
+*	**Request Body:** (optional)
 	
 
-**Response:**
-HTTP server returns a response message, containing the following message parts and requested resource or error code:
+**RESPONSE:**
+HTTP server returns a response message, containing the following message parts and requested resource or error code
 
-	* ** Message Status-Line** : Protocol Version*, Status Code*, Reason-Phrase*
+* **Message Status-Line**  : Protocol Version*, Status Code*, Reason-Phrase*
 
-	* **Response Header**: information about the server and about further access to the resource identified by the Request-URI
+* **Response Header** : information about the server and about further access to the resource identified by the Request-URI
 
-	* **Response Body**: (optional) A single string containing markup or other information
+* **Response Body** : (optional) A single string containing markup or other information
 After delivering this response, the server closes the connection.
 
-	* *Request-URI* – (Uniform Resource Identifier) resource upon which to apply the request
-	* *Request-Method* – tells the server what you would like to do with the URI (aka HTTP Verb)
-	* *Protocol Version* – uses standard versioning to indicate which version of the protocol is being used. 1.1 includes implementation of features such as caching, persistant connections, etc.
-	* *Status code* – three digit code that states details of the success or failure of a request
-	* *Reason Phrase* – optional textual phrase associated with the status code for understanding
+
+*Request-URI* – (Uniform Resource Identifier) resource upon which to apply the request
+*Request-Method* – tells the server what you would like to do with the URI (aka HTTP Verb)
+*Protocol Version* – uses standard versioning to indicate which version of the protocol is being used. 1.1 includes implementation of features such as caching, persistant connections, etc.
+*Status code* – three digit code that states details of the success or failure of a request
+*Reason Phrase* – optional textual phrase associated with the status code for understanding
 	
 HTTP is a stateless protocol, where the server and client are only aware of eachother during a request. Once the server closes the connection, neither party retains this information – both parties essentially forget about each other.
 
