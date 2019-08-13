@@ -99,7 +99,7 @@ These verbs are built into Sinatra methods called Routes that handle each type o
 Route block containing logic/templates for that page:
 
 ```
-   **http_verb** '/:path' do
+   http_verb  '/:path' do
       #template data
       erb: 'template.rb'     
     end
@@ -116,8 +116,8 @@ User                 Browser                  App                      View     
 ￼
 Building on top of that, let’s look at the **DELETE** method:
 
-		**delete** '/:resource' do
-			*#image, page, or other resource location*
+		DELETE '/:resource' do
+			#image, page, or other resource location
 			redirect: 'hello_world.rb'
 		end
 		
@@ -130,8 +130,8 @@ User                 Browser                  App                      View     
 
 The next request in complexity is the **POST** method:
 
-		**post ** '/:path' do
-			*#html template or resource to be created on the server*
+		POST '/:path' do
+			#html template or resource to be created on the server
 		end
 		
 Similar in behavior, but not to be confused with the  *PATCH* (update) methods, a **POST** request creates a brand new resource on the server at the specified path:
@@ -145,12 +145,12 @@ User                 Browser                  App                      View     
 Last but not least, lets have a look at the **PUT** and/or **PATCH** HTTP requests. Sandwiched in between two get responses, these request result in an updated or entirely new resource at the specified path:
 
 ```
-		**put**  '/:path' do
-			*#html template or resource to be replaced on the server*
+		PUT  '/:path' do
+			#html template or resource to be replaced on the server
 		end
 
-		**patch**  '/:path' do
-			*#html template or resource to be updated on the server*
+		PATCH '/:path' do
+			#html template or resource to be updated on the server
 		end
 ```
 
@@ -174,4 +174,4 @@ There is, of corse, more to HTTP than just the basics I’ve run through here. T
 
 *http://www.w3.org/Protocols/rfc2616/rfc2616.html*
 
-*  http://www.sinatrarb.com http://skillcrush.com/2012/05/11/404-error/
+*http://www.sinatrarb.com http://skillcrush.com/2012/05/11/404-error/*
