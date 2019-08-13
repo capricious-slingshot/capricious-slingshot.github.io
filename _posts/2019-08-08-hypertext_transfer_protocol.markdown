@@ -115,7 +115,6 @@ Route block containing logic/templates for that page:
 
 Assuming that you have a very basic understanding of MVC architecture, lets visually step through through the flow of a **GET** request in a basic Sinatra app:
 
-User                 Browser                  App                      View                  Data
 <img src="https://i.postimg.cc/ZqLZ4mr3/GET.png" alt="get_request">
 
 
@@ -130,7 +129,6 @@ Building on top of that, let’s look at the **DELETE** method:
 		
 This builds upon the *GET* request, as specified in version 1.1 of the HTTP specification. The connection remains open until the entire request has finished, in this case it’s a delete request stacked on top of redirect that then fetches the HTML for a default page:
 
-User                 Browser                  App                      View                  Data
 <img src="https://i.postimg.cc/DzhF90bn/DELETE.png" alt="delete_request">
 
 ---
@@ -143,15 +141,13 @@ The next request in complexity is the **POST** method:
 		
 Similar in behavior, but not to be confused with the  *PATCH* (update) methods, a **POST** request creates a brand new resource on the server at the specified path:
 
-User                 Browser                  App                      View                  Data
-
 <img src="https://i.postimg.cc/3RJhwqBq/POST.png" alt="post_request">
 
 ---
 
 Last but not least, lets have a look at the **PUT** and/or **PATCH** HTTP requests. Sandwiched in between two get responses, these requests result in an updated or entirely new resource at the specified path:
 
-```
+
 		PUT  '/:path' do
 			#html template or resource to be replaced on the server
 		end
@@ -159,18 +155,19 @@ Last but not least, lets have a look at the **PUT** and/or **PATCH** HTTP reques
 		PATCH '/:path' do
 			#html template or resource to be updated on the server
 		end
-```
+
 
 These two are so similar in nature that the difference in what is actually being done on the server is negligible. The difference in the verbs is more for developer understanding:
 
-User:              | Browser:       | App:                |  View:                |             Data : |
 ￼![put/patch](https://i.postimg.cc/ZR7SvLs5/PUT-PATCH.png)
 
 ---
  
 There is, of corse, more to HTTP than just the basics I’ve run through here. These are the the most common interactions that you will have with HTTP when building for Sinatra and this brief foundation will get you a long way. For further information or to just satisfy your general curiosity feel free to explore the links below.
 
-##### Resources
+---
+
+**Resources**
 *http://www.jmarshall.com/easy/http/#whatis*
 
 *http://en.wikipedia.org/wiki/List_of_HTTP_status_codes*
