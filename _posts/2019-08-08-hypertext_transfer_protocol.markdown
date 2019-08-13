@@ -116,7 +116,7 @@ Route block containing logic/templates for that page:
 Assuming that you have a very basic understanding of MVC architecture, lets visually step through through the flow of a **GET** request in a basic Sinatra app:
 
 User                 Browser                  App                      View                  Data
-<img src="https://photos.google.com/photo/AF1QipPxtCei_WLZlbOKEaZFo9OdHtRkrQsFapFLYQym" alt="get_request">
+<img src="https://i.postimg.cc/ZqLZ4mr3/GET.png" alt="get_request">
 
 
 ---
@@ -131,7 +131,7 @@ Building on top of that, let’s look at the **DELETE** method:
 This builds upon the *GET* request, as specified in version 1.1 of the HTTP specification. The connection remains open until the entire request has finished, in this case it’s a delete request stacked on top of redirect that then fetches the HTML for a default page:
 
 User                 Browser                  App                      View                  Data
-￼![delete request](https://postimg.cc/FYT2c9ZB)
+<img src="https://i.postimg.cc/DzhF90bn/DELETE.png" alt="delete_request">
 
 ---
 
@@ -145,7 +145,7 @@ Similar in behavior, but not to be confused with the  *PATCH* (update) methods, 
 
 User                 Browser                  App                      View                  Data
 
-![post](https://photos.google.com/photo/AF1QipMpTuU5gGr8UmH7K23ia7405xbOjIbr2NX6MUYl)
+<img src="https://i.postimg.cc/3RJhwqBq/POST.png" alt="post_request">
 
 ￼---
 
@@ -165,7 +165,7 @@ These two are so similar in nature that the difference in what is actually being
 
 User                 Browser                  App                      View                  Data
 
-￼![put/patch](https://photos.google.com/photo/AF1QipM05yqzp6pso9yk5o4mAYuMWlGCj4vbXSngONIe)
+￼![put/patch](https://i.postimg.cc/ZR7SvLs5/PUT-PATCH.png)
 
 ---
  
