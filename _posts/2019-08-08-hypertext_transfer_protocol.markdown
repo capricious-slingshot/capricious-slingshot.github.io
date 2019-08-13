@@ -18,7 +18,8 @@ Protocol – formatting rules for this information
 	
 This protocol is composed of messages that are sent from client to server and back in a cyclical process known as the **Request Response Loop**. Although this cycle can be quite complex as a message finds it’s was from the client to the server and back, we will only be looking at the origin and end result; the *Request* and the *Response*. 
 
-**REQUEST**
+**REQUEST:**
+
 HTTP client opens a connection and sends a request message composed of the following parts to an HTTP server:
 
 *	**Request-Line:** Request-Method*, Request-URI*, Protocol Version*
@@ -29,6 +30,7 @@ HTTP client opens a connection and sends a request message composed of the follo
 	
 
 **RESPONSE:**
+
 HTTP server returns a response message, containing the following message parts and requested resource or error code
 
 * **Message Status-Line**  : Protocol Version*, Status Code*, Reason-Phrase*
@@ -40,10 +42,15 @@ After delivering this response, the server closes the connection.
 
 
 *Request-URI* – (Uniform Resource Identifier) resource upon which to apply the request
+
 *Request-Method* – tells the server what you would like to do with the URI (aka HTTP Verb)
+
 *Protocol Version* – uses standard versioning to indicate which version of the protocol is being used. 1.1 includes implementation of features such as caching, persistant connections, etc.
+
 *Status code* – three digit code that states details of the success or failure of a request
+
 *Reason Phrase* – optional textual phrase associated with the status code for understanding
+
 	
 HTTP is a stateless protocol, where the server and client are only aware of eachother during a request. Once the server closes the connection, neither party retains this information – both parties essentially forget about each other.
 
