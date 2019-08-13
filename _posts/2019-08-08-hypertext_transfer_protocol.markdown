@@ -75,6 +75,7 @@ Code  | Reason Phrase | Description
 **404** |*Not Found* | Returned by the server when it can’t find the page that you’re  looking for
 **500** | *Internal Server Error* | Generic error message, given when an unexpected condition was encountered and no more specific message is suitable. Equivalent of a Server crying out for help because something’s broken.
 **418** | *I’m a Teapot* | Put together as an April Fools Day joke in 1998, as part of the specification for the Hyper Text Coffee Pot Control Protocol – meaning status codes for your teapot!
+---
 
 HTTP is lovely and all, how do we apply all of this to web development in Ruby? There are a couple of layers.
 
@@ -157,7 +158,7 @@ Last but not least, lets have a look at the **PUT** and/or **PATCH** HTTP reques
 These two are so similar in nature that the difference in what is actually being done on the server is negligible. The difference in the verbs is more for developer understanding:
 
 User                 Browser                  App                      View                  Data
-￼![put/[patch](https://photos.google.com/photo/AF1QipM05yqzp6pso9yk5o4mAYuMWlGCj4vbXSngONIe)
+￼![put/patch](https://photos.google.com/photo/AF1QipM05yqzp6pso9yk5o4mAYuMWlGCj4vbXSngONIe)
 
 ---
  
@@ -170,7 +171,7 @@ There is, of corse, more to HTTP than just the basics I’ve run through here. T
 
 *http://shop.oreilly.com/product/0636920019664.do*
 
-*http://www.tutorialspoint.com/http/http_tutorial.pdf *  
+*http://www.tutorialspoint.com/http/http_tutorial.pdf*  
 
 *http://www.w3.org/Protocols/rfc2616/rfc2616.html*
 
