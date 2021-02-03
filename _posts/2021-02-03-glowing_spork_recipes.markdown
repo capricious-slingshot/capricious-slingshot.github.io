@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Glowing Spork Recipes"
-date:       2021-02-03 19:54:57 +0000
+date:       2021-02-03 14:54:58 -0500
 permalink:  glowing_spork_recipes
 ---
 
@@ -16,7 +16,7 @@ Rails relies on convention over configuration, and while this does a lot of the 
 
 For my project I went with the generic suggestion of building a recipe card application. I wasn’t particularly jazzed about the topic, but it was an averaged sized problem that presented several different ways you could approach it. Unoriginality drives me insane, but the ability to architect my own approach to solving the problem was very appealing.
 
-The first step was to bang out my schema - I don’t really care for any of the fancy DB Schema software, I find it much easier to just bang it out in my text editor. Nothing a few cups of coffee can’t solve. I didn’t have too many issues or deviations from the original schema outside of idiot human errors. Turns out spelling is hard - I repeatedly misspelled ‘Recipe’ through the project time and lost epochs going to fix all of the things.
+The first step was to bang out my schema - I don’t really care for any of the fancy DB Schema software, I find it much easier to just bang it out in my text editor. Nothing a few cups of coffee can’t solve. I didn’t have too many issues or deviations from the original schema outside of idiot human errors. Turns out spelling is hard - I repeatedly misspelled ‘Recipe’ through the project and lost epochs of time fixing all of the things.
 
 The next step was to stand up the app and get something I to look at - and after doing a little research I decided to go with Bulma. I’ve worked with Bootstrap and Foundation in the past and wanted to try something new. Bulma is lightweight and seemed like a pleasant alternative to the bloated backend. I banged out a simple Recipe index and show page with corresponding model to get something to look at.
 
@@ -25,7 +25,7 @@ Authentication followed, created a separate layout for that piece and stood it u
 Next step was to blow away minitest and set up with Rspec. There isn’t any support in the curriculum for testing or deployment, so I got the basic framework up an hacked a few tests in. The original thought was that I would skip over testing for the purpose of brevity and time, but then as my application became more complex, I really hated myself for not taking the time to properly build them out. This is something that I need to finish, I’m not comfortable leaving these two areas unfinished.
  
 
-Nested forms was the bane of my existence for longer than it really should have been, but if something is worth doing, it’s worth doing properly and I rejected any suggestion to dumb things down. It was the only semi-interesting piece in this project. I went with a double nesting and then used the [Cocoon gem](https://github.com/nathanvda/cocoon/) on top to dynamically handle the addition/subtraction of field elements by the user. It eventually came together, and in hindsight it actually wasn’t that difficult. You just need to be able to get feedback form someone that knows what they’re doing. (Thanks Dustin 7 nathanvda!). 
+Nested forms was the bane of my existence for longer than it really should have been, but if something is worth doing, it’s worth doing properly and I rejected any suggestion to dumb things down. It was the only semi-interesting piece in this project. I went with a double nesting and then used the [Cocoon gem](https://github.com/nathanvda/cocoon/) on top to dynamically handle the addition/subtraction of field elements by the user. It eventually came together, and in hindsight it actually wasn’t that difficult. You just need to be able to get feedback form someone that knows what they’re doing. (*Thanks Dustin & nathanvda!*). 
 
 
 There are a few other JS touches that I would really like to come back and add in when I learn how. Minor things like dismissing notices, fixing the mobile navigation, as well as the display of user recipe tabs. Similarly the search only goes so deep - it was mentioned that JS is the faster way to handle this for the sake of the load on the server and rendering time. I still would have liked to be able to handle this on the server side, purely for the sake of understanding how things work and how they compare and contrast.
